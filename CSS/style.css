@@ -1,0 +1,167 @@
+:root {
+  --background-color: #2d3439;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.menu {
+  background-color: var(--background-color);
+  width: 600px;
+  padding: 30px 50px;
+}
+
+.menu .logo {
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.menu .logo img {
+  max-width: 100%;
+}
+
+.menu .workout-inputs {
+  position: relative;
+  background-color: #42484d;
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-top: 50px;
+  right: 0;
+  transition: 0.5s;
+}
+
+.menu .hidden {
+  position: absolute;
+  right: 500%;
+}
+
+.menu .workout-inputs form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu .workout-inputs form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu .workout-inputs form > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu .workout-inputs label {
+  color: #d6dee0;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+}
+
+.menu .workout-inputs input,
+select {
+  width: clamp(70px, 2.5vw, 90px);
+  background-color: #d6dee0;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+}
+
+.menu .workout-inputs input:focus {
+  outline: none;
+  background-color: aliceblue;
+}
+
+.menu .workout {
+  background-color: #42484d;
+  padding: 20px 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: 0.4s;
+  color: #d6dee0;
+  cursor: pointer;
+}
+
+.menu .workout h5 {
+  margin-bottom: clamp(12px, 2.5vw, 18px);
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+}
+
+.menu .workout .stat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu .workout span {
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+  letter-spacing: 1px;
+}
+
+.menu .workout span span {
+  font-size: clamp(0.1rem, 2.5vw, 0.7rem);
+  font-weight: bold;
+  color: #aaaaaa;
+}
+
+.menu .running {
+  border-left: 5px solid #00c46a;
+}
+
+.menu .cycling {
+  border-left: 5px solid #ffb545;
+}
+
+.map {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .menu {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 10px 30px;
+  }
+
+  .menu .logo {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .menu .logo img {
+    max-width: 80px;
+  }
+
+  .menu .workout-inputs {
+    margin-top: 10px;
+    padding: 20px 25px;
+  }
+
+  .menu .workout {
+    padding: 15px 15px;
+  }
+}

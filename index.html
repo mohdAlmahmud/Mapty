@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapty</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/all.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/nor.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="" />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="workout-inputs hidden">
+          <form>
+            <div>
+              <div>
+                <label for="type">Type</label>
+                <select class="type">
+                  <option value="running">Running</option>
+                  <option value="cycling">Cycling</option>
+                </select>
+              </div>
+              <div>
+                <label for="">Distance</label>
+                <input class="distance" type="text" placeholder="km" />
+              </div>
+            </div>
+            <div>
+              <div>
+                <label for="">Duration</label>
+                <input class="duration" type="text" placeholder="min" />
+              </div>
+              <div>
+                <label for="">Cadence</label>
+                <input class="cadence" type="text" placeholder="step/min" />
+              </div>
+              <div class="hidden">
+                <label for="">Elev Gain</label>
+                <input class="elevation" type="text" placeholder="meters" />
+              </div>
+            </div>
+            <button style="display: none"></button>
+          </form>
+        </div>
+        <!-- <div class="running" data-id="">
+          <h5>Running on day</h5>
+          <div class="stat">
+            <span>🏃666 <span>KM</span></span>
+            <span>⏱999 <span>MIN</span></span>
+            <span>⚡️1.5 <span>MIN/KM</span></span>
+            <span>🦶🏼666 <span>SPM</span></span>
+          </div>
+        </div> -->
+      </div>
+      <div class="map" id="map"></div>
+    </div>
+  </body>
+</html>
